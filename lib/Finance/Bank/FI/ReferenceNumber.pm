@@ -16,7 +16,7 @@ Laskee suomalaisen maksun viitenumeron.
 
 =head1 SYNOPSIS
 
-    #The number given in the argument must be have a length of 3..19.
+    #The number given in the argument must have a length of 3..19.
     my $ref = Finance::Bank::FI::ReferenceNumber->new('123');
 
     print "The reference number is " . $ref->get();
@@ -39,7 +39,7 @@ sub BUILD {
     my $self = shift;
     my $args = shift;
 
-    # Number is remittanceinfoidentifier, viitenumeron runko-osa in Finnish. 
+    # Number is remittance info identifier, viitenumeron runko-osa in Finnish. 
     my $ref = $args->{number};
 
     my $refsum = 0;
@@ -59,8 +59,8 @@ sub BUILD {
 
 =head2 get
 
-    Returns the reference number consisting of the number given for new() and
-    the calculated checksum number.
+    Returns the reference number consisting of the number given for new()
+    concatenated with the calculated checksum number.
 
 =cut
 
@@ -77,11 +77,11 @@ Accepts numbers longer than 19 digits in new().
 =head1 AUTHOR
 
 Panu Ervamaa
-Oskari Ojala <perl@okko.net>
+Oskari Ojala <okko@cpan.org>
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2011 the above author(s).
+Copyright 2011-2012 the above author(s).
 
 This sofware is free software, and is licensed under the same terms as perl itself.
 
