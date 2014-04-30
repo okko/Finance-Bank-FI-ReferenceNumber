@@ -1,4 +1,5 @@
 package Finance::Bank::FI::ReferenceNumber;
+
 use Moose;
 use namespace::autoclean;
 use utf8;
@@ -76,7 +77,8 @@ Accepts numbers longer than 19 digits in new().
 
 =head1 AUTHOR
 
-Panu Ervamaa
+Panu Ervamaa <pnu@cpan.org>
+
 Oskari Ojala <okko@cpan.org>
 
 =head1 COPYRIGHT & LICENSE
